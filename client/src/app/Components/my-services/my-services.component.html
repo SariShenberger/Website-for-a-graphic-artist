@@ -1,0 +1,15 @@
+<h5 style="padding-top: 5vh;">מגוון השירותים שלי</h5>
+<div class="row  " style="text-align: -webkit-center; margin-top: 7vh; ">
+<div *ngFor="let item of myServices | async" class="col">
+    <div class="card col" style="margin: 10px; " >
+        <img class="card-img-top" src={{item.image}} >
+        <div class="card-body">
+            <h4 class="card-title">{{item.title}}</h4>
+            <a (click)="moreDetails(item)">פרטים</a>
+            <app-service-details [ser]="item" *ngIf="item.showDetails"></app-service-details>
+        </div>
+    
+   
+</div>
+</div>
+</div>

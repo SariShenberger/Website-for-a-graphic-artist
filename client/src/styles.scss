@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+#container{
+    background-image:url(assets/תמונה1.jpg); 
+    background-repeat: no-repeat;background-size: cover; 
+    height: 100vh;
+    margin-top: 15vh;
+    opacity: 10;
+    text-align: center;
+}
+.list{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.home{
+    // background-image: url(../../../assets/LOGO.jpg);
+   background-color: #222121;
+   height: -webkit-fill-available;
+}
+.homeImg{
+     height: 41vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}

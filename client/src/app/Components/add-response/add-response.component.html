@@ -1,0 +1,26 @@
+<form [formGroup]="addResponseForm"  class="container-fluname" style="margin-top: 5vh;
+text-align: -webkit-center; direction: rtl;"(ngSubmit)="addResponse()">
+<h4>הוספת תגובה</h4>
+<input  title="השם חייב להיות בעברית" name="firstName" class="form-control"  type="text" placeholder="שם פרטי" formControlName="firstName" appValidation>
+<!-- <div [hidden]="!addResponseForm.firstName.errors?.['onlyLettersInValid']||addResponseForm.firstName.pristine" class="alert alert-danger">
+    השם חייב להיות בעברית
+  </div> -->
+<input title="השם חייב להיות בעברית" name="lastName" class="form-control"  type="text" placeholder="שם משפחה" formControlName="lastName" appValidation>
+<!-- <mat-error *ngIf="addResponseForm.lastName.errors?.required"></mat-error> -->
+<!-- <div [hidden]="!lastName.errors?.['onlyLettersInValid']||lastName.pristine" class="alert alert-danger">
+    השם חייב להיות בעברית
+  </div> -->
+<input title="התגובה חייבת להיות בעברית" name="description" class="form-control"  type="text" placeholder="תיאור התגובה"formControlName="description" appValidation>
+<!-- <div [hidden]="!description.errors?.['onlyLettersInValid']||description.pristine" class="alert alert-danger">
+    התגובה חייבת להיות בעברית
+  </div> -->
+<input title="מספר הטלפון שלך אמור להכיל מספרים בלבד!" name="phoneNumber" class="form-control"  type="text" placeholder="טלפון" formControlName="phoneNumber"  appValidation>
+<!-- <div [hidden]="!phoneNumber.errors?.['onlyDigitsInValid']||phoneNumber.pristine" class="alert alert-danger">
+    מספר הטלפון שלך אמור להכיל מספרים בלבד!
+  </div> -->
+<input class="form-control" required type="email" placeholder="אמייל" formControlName="Email" >
+<input  type="submit" class="btn btn-primary"   value="הוספה">
+<!-- [disabled]="!addResponseForm.valid"  -->
+   
+</form>
+<p *ngIf="!addResponseForm.status">Form Status: {{ addResponseForm.status }}</p>
